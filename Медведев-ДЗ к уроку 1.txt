@@ -1,0 +1,82 @@
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir qa_free
+
+3) Зайти в папку
+cd qa_free
+
+4) Создать 3 папки
+mkdir qa1_test qa2_test qa3_test
+
+5) Зайти в любоую папку
+cd qa1_test
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch file1.txt file2.txt file3.txt file4.json file5.json
+
+7) Создать 3 папки
+mkdir 1 2 3
+
+8. Вывести список содержимого папки
+ls -la
+
+9) + Открыть любой txt файл
+cat file1.txt
+
+10) + написать туда что-нибудь, любой текст.
+$ cat >> file1.txt
+Privet iz Tveri!
+
+11) + сохранить и выйти.
+Ctrl+D
+
+12) Выйти из папки на уровень выше
+cd ../
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv qa1_test/file1.txt qa1_test/1/file1.txt
+mv qa1_test/file2.txt qa1_test/1/file2.txt
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp qa1_test/file4.json qa1_test/2/file4.json
+cp qa1_test/file5.json qa1_test/2/file5.json
+
+15) Найти файл по имени
+find . -depth -name "file1.txt"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -f file2.txt
+
+17) вывести несколько первых строк из текстового файла
+head -n3 file2.txt
+
+18) вывести несколько последних строк из текстового файла
+tail -4 file2.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less file2.txt
+
+20) вывести дату и время
+date "+%d-%m-%Y-%H-%M-%S"
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl "http://162.55.220.72:5005/get_method?name=(Evgen)&age=(34)"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+
+cd qa_free_avto
+mkdir qa1_test qa2_test qa3_test
+cd qa1_test
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir 1 2 3
+ls -la
+mv qa1_test/file1.txt qa1_test/1/file1.txt
+mv qa1_test/file2.txt qa1_test/1/file2.txt
+echo " Krasavchik, idi otdyxai!"
