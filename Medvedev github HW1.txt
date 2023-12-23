@@ -10,6 +10,11 @@ git checkout . // возвращает все файлы текущей дире
 git stash  // временно скрывает изменения в файле
 git stash pop // отображает временно скрытые изменения в файле
 
+git branch my_first_branch // от последнего коммита создали новую ветку "my_first_branch"
+git branch // посмотреть какие есть ветки, текущая ветка помечена звездочкой
+git checkout my_first_branch // переключились на новую ветку "my_first_branch"
+
+
 JSON
  4. Создать внешний репозиторий c названием JSON.
 https://github.com/Tverskoy31/JSON
